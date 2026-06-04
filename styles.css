@@ -179,15 +179,14 @@ section {
 }
 
 .logo {
-    font-size: var(--font-size-1);
-    font-weight: 700;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: var(--color-dark);
-    letter-spacing: -0.02em;
 
-    span {
-        color: var(--color-brand);
-        font-weight: 400;
+    img {
+        height: 48px;
+        width: auto;
+        display: block;
     }
 }
 

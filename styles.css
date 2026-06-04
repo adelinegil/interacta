@@ -607,10 +607,6 @@ section {
         display: flex;
     }
 
-    .site-header {
-        position: relative;
-    }
-
     #nav-principal {
         display: none;
         position: absolute;

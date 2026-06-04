@@ -153,29 +153,29 @@ section {
     justify-content: space-between;
     align-items: center;
     padding-block: var(--space-s);
+}
 
-    nav ul {
-        display: flex;
-        gap: var(--space-xs);
-        align-items: center;
+.navbar nav ul {
+    display: flex;
+    gap: var(--space-xs);
+    align-items: center;
+}
 
-        a {
-            padding: 0.4em 0.6em;
-            text-decoration: none;
-            font-size: var(--font-size-0);
-            border-radius: 4px;
-            transition: background-color 0.15s;
-        }
+.navbar nav ul a {
+    padding: 0.4em 0.6em;
+    text-decoration: none;
+    font-size: var(--font-size-0);
+    border-radius: 4px;
+    transition: background-color 0.15s;
+}
 
-        a:hover {
-            background-color: var(--color-light);
-        }
+.navbar nav ul a:hover {
+    background-color: var(--color-light);
+}
 
-        a[aria-current="page"] {
-            background-color: var(--color-dark);
-            color: var(--color-white);
-        }
-    }
+.navbar nav ul a[aria-current="page"] {
+    background-color: var(--color-dark);
+    color: var(--color-white);
 }
 
 .logo {
@@ -607,6 +607,10 @@ section {
         display: flex;
     }
 
+    .site-header {
+        position: relative;
+    }
+
     #nav-principal {
         display: none;
         position: absolute;
@@ -617,31 +621,27 @@ section {
         border-top: 1px solid var(--color-border);
         box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         z-index: 99;
-
-        ul {
-            flex-direction: column;
-            gap: 0;
-            padding: var(--space-s) 0;
-        }
-
-        a {
-            display: block;
-            padding: var(--space-s) var(--space-m);
-            border-radius: 0;
-        }
-
-        .btn-nav {
-            margin: var(--space-s) var(--space-m);
-            display: inline-block;
-            border-radius: 4px;
-        }
     }
 
     #nav-principal.nav-open {
         display: block;
     }
 
-    .site-header {
-        position: relative;
+    #nav-principal ul {
+        flex-direction: column;
+        gap: 0;
+        padding: var(--space-s) 0;
+    }
+
+    #nav-principal ul a {
+        display: block;
+        padding: var(--space-s) var(--space-m);
+        border-radius: 0;
+    }
+
+    #nav-principal ul .btn-nav {
+        margin: var(--space-s) var(--space-m);
+        display: inline-block;
+        border-radius: 4px;
     }
 }

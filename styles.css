@@ -446,7 +446,53 @@ section {
 }
 
 /* =====================
-   CURSOS (grid herdado)
+   CURSOS
+===================== */
+.cursos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+}
+
+.curso-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.curso-img img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.curso-content {
+    h3 {
+        margin-block: var(--space-xs) var(--space-2xs);
+    }
+
+    p {
+        color: var(--color-text-muted);
+        margin-block-end: var(--space-m);
+    }
+}
+
+.curso-meta {
+    font-size: var(--font-size--1) !important;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin-block-end: var(--space-s) !important;
+}
+
+@media (max-width: 768px) {
+    .curso-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================
+   GRID GENÉRICO (herdado)
 ===================== */
 .grid {
     display: grid;

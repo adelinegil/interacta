@@ -141,11 +141,24 @@ section {
    HEADER / NAVBAR
 ===================== */
 .site-header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-border);
+}
+
+/* Compensa a altura do header fixo */
+body {
+    padding-top: 300px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 160px;
+    }
 }
 
 .navbar {

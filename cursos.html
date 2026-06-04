@@ -7,21 +7,25 @@
     <meta name="description" content="Cursos de design UX/UI ministrados pela Interacta Design.">
     <title>Cursos — Interacta Design</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
 
     <header class="site-header">
         <div class="navbar wrapper">
-            <a class="logo" href="index.html"><img src="interacta_logo.png" alt="Interacta Design" height="72"></a>
-            <nav aria-label="Navegação principal">
+            <a class="logo" href="index.html"><img src="interacta_logo.png" alt="Interacta Design"></a>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+                <i data-lucide="menu"></i>
+            </button>
+            <nav id="nav-principal" aria-label="Navegação principal">
                 <ul>
-                    <li><a href="/#servicos">Serviços</a></li>
-                    <li><a href="/#cases">Cases</a></li>
-                    <li><a href="/#pesquisa">Pesquisa</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#cases">Cases</a></li>
+                    <li><a href="index.html#pesquisa">Pesquisa</a></li>
                     <li><a href="cursos.html" aria-current="page">Cursos</a></li>
-                    <li><a href="/#sobre">Sobre</a></li>
-                    <li><a href="/#contato" class="btn-nav">Contato</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#contato" class="btn-nav">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -78,6 +82,25 @@
         </div>
     </footer>
 
+    <script>
+        lucide.createIcons();
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('#nav-principal');
+        toggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('nav-open');
+            toggle.setAttribute('aria-expanded', open);
+            toggle.querySelector('svg').setAttribute('data-lucide', open ? 'x' : 'menu');
+            lucide.createIcons();
+        });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav-open');
+                toggle.setAttribute('aria-expanded', false);
+                toggle.querySelector('svg').setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+    </script>
 </body>
 
 </html>

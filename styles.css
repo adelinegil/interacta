@@ -184,9 +184,24 @@ section {
     text-decoration: none;
 
     img {
-        height: 72px;
+        height: 144px;
         width: auto;
         display: block;
+    }
+}
+
+/* Botão hamburguer — oculto no desktop */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-2xs);
+    color: var(--color-dark);
+
+    svg {
+        width: 28px;
+        height: 28px;
     }
 }
 
@@ -578,14 +593,55 @@ section {
         order: -1;
     }
 
-    .navbar nav ul {
-        gap: var(--space-2xs);
-
-        a { padding: 0.3em 0.4em; font-size: var(--font-size--1); }
-    }
-
     .hero-actions {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .logo img {
+        height: 72px;
+    }
+
+    /* Hamburguer */
+    .menu-toggle {
+        display: flex;
+    }
+
+    #nav-principal {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        border-top: 1px solid var(--color-border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        z-index: 99;
+
+        ul {
+            flex-direction: column;
+            gap: 0;
+            padding: var(--space-s) 0;
+        }
+
+        a {
+            display: block;
+            padding: var(--space-s) var(--space-m);
+            border-radius: 0;
+        }
+
+        .btn-nav {
+            margin: var(--space-s) var(--space-m);
+            display: inline-block;
+            border-radius: 4px;
+        }
+    }
+
+    #nav-principal.nav-open {
+        display: block;
+    }
+
+    .site-header {
+        position: relative;
     }
 }

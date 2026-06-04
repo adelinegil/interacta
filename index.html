@@ -7,13 +7,14 @@
     <meta name="description" content="Interacta Design — Pesquisa em UX, prototipagem, design de interfaces e design systems.">
     <title>Interacta Design</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
 
     <header class="site-header">
         <div class="navbar wrapper">
-            <a class="logo" href="/"><img src="interacta_logo.png" alt="Interacta Design" height="48"></a>
+            <a class="logo" href="index.html"><img src="interacta_logo.png" alt="Interacta Design" height="72"></a>
             <nav aria-label="Navegação principal">
                 <ul>
                     <li><a href="#servicos">Serviços</a></li>
@@ -48,22 +49,22 @@
                 <h2 id="servicos-title">O que fazemos</h2>
                 <ul class="servicos-grid">
                     <li class="servico-card">
-                        <div class="servico-icon" aria-hidden="true">🔍</div>
+                        <div class="servico-icon" aria-hidden="true"><i data-lucide="search"></i></div>
                         <h3>Pesquisa em UX</h3>
                         <p>Entrevistas, testes de usabilidade e análise de dados para entender profundamente os usuários e embasar decisões de design.</p>
                     </li>
                     <li class="servico-card">
-                        <div class="servico-icon" aria-hidden="true">✏️</div>
+                        <div class="servico-icon" aria-hidden="true"><i data-lucide="pen-tool"></i></div>
                         <h3>Prototipagem</h3>
                         <p>Do wireframe ao protótipo navegável de alta fidelidade, validando ideias rapidamente antes do desenvolvimento.</p>
                     </li>
                     <li class="servico-card">
-                        <div class="servico-icon" aria-hidden="true">🖥️</div>
+                        <div class="servico-icon" aria-hidden="true"><i data-lucide="monitor"></i></div>
                         <h3>Design de Interfaces</h3>
                         <p>Criação de interfaces digitais funcionais, acessíveis e visualmente consistentes para web e mobile.</p>
                     </li>
                     <li class="servico-card">
-                        <div class="servico-icon" aria-hidden="true">🧩</div>
+                        <div class="servico-icon" aria-hidden="true"><i data-lucide="layers"></i></div>
                         <h3>Design Systems</h3>
                         <p>Bibliotecas de componentes e guias de estilo que garantem consistência e agilidade no desenvolvimento de produtos.</p>
                     </li>
@@ -211,6 +212,7 @@
         </div>
     </footer>
 
+    <script>lucide.createIcons();</script>
 </body>
 
 </html>

@@ -184,7 +184,7 @@ section {
     text-decoration: none;
 
     img {
-        height: 48px;
+        height: 72px;
         width: auto;
         display: block;
     }
@@ -268,8 +268,14 @@ section {
 }
 
 .servico-icon {
-    font-size: 2rem;
     margin-block-end: var(--space-xs);
+
+    svg {
+        width: 32px;
+        height: 32px;
+        stroke: var(--color-brand);
+        stroke-width: 1.5;
+    }
 }
 
 /* =====================

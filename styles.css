@@ -384,6 +384,17 @@ section {
         font-size: var(--font-size-0);
         font-weight: 600;
         margin-block-end: var(--space-2xs);
+
+        a {
+            color: var(--color-dark);
+            text-decoration: underline;
+            text-decoration-color: var(--color-brand);
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--color-brand);
+        }
     }
 
     p {
